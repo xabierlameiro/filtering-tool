@@ -9,3 +9,7 @@
 
 # Getting started
 - npm run dev
+
+
+# Libs
+- https://www.conventionalcommits.org/es/v1.0.0/
