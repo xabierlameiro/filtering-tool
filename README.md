@@ -13,3 +13,4 @@
 
 # Libs
 - https://www.conventionalcommits.org/es/v1.0.0/
+- https://keepachangelog.com/en/1.0.0/
