@@ -1,3 +1,6 @@
+# Goal 
+![Landing page](landing_page.svg) 
+
 # Set up steps
 - npx create-next-app@latest
 - TypeScript - Yes
