@@ -9,8 +9,8 @@
     "lint": "next lint",
     "prepare": "husky",
     "pre-commit": "npm test",
-    "release": "standard-version && git push --tags",
-    "pre-release": "npm run release -- --prerelease && git push --tags"
+    "release": "standard-version && git push --tags && git push",
+    "pre-release": "npm run release -- --prerelease && git push --tags && git push"
   },
   "dependencies": {
     "next": "14.1.3",
