@@ -13,6 +13,6 @@ Changelog
 ### [0.1.1](https://github.com/xabierlameiro/filtering-tool/releases/tag/v0.1.1) (2024-03-16)
 
 
-### Features
+### Documentation
 
 * update README.md ([bdb7e38](https://github.com/xabierlameiro/filtering-tool/commit/bdb7e38fd66367133be1eba4014be3fa8d824b8d))
