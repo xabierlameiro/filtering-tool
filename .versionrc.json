@@ -1,19 +1,19 @@
 {
-    "header": "Changelog",
-    "types": [
-      {"type": "feat", "section": "Features"},
-      {"type": "fix", "section": "Bug Fixes"},
-      {"type": "chore", "hidden": true},
-      {"type": "docs", "section" : "Documentation"},
-      {"type": "style", "hidden": true},
-      {"type": "refactor", "hidden": true},
-      {"type": "perf", "hidden": true},
-      {"type": "test", "section" : "Tests"},
-      {"type": "build", "hidden": true},
-      {"type": "ci", "hidden": true}
-    ],
-    "commitUrlFormat": "https://github.com/xabierlameiro/filtering-tool/commit/{{hash}}",
-    "compareUrlFormat": "https://github.com/xabierlameiro/filtering-tool/compare/{{previousTag}}...{{currentTag}}",
-    "issuePrefixes": ["#"],
-    "issueUrlFormat": "https://github.com/xabierlameiro/filtering-tool/issues/{{id}}"
+  "header": "Changelog",
+  "types": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug Fixes" },
+    { "type": "chore", "hidden": true },
+    { "type": "docs", "section": "Documentation" },
+    { "type": "style", "hidden": true },
+    { "type": "refactor", "hidden": true },
+    { "type": "perf", "hidden": true },
+    { "type": "test", "section": "Tests" },
+    { "type": "build", "hidden": true },
+    { "type": "ci", "hidden": true }
+  ],
+  "commitUrlFormat": "https://github.com/xabierlameiro/filtering-tool/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/xabierlameiro/filtering-tool/compare/{{previousTag}}...{{currentTag}}",
+  "issuePrefixes": ["#"],
+  "issueUrlFormat": "https://github.com/xabierlameiro/filtering-tool/issues/{{id}}"
 }

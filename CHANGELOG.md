@@ -1,4 +1,5 @@
 Changelog
+
 ### [0.1.3](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.2...v0.1.3) (2024-03-16)
 
 ### Features

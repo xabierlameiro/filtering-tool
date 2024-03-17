@@ -10,7 +10,8 @@
     "prepare": "husky",
     "pre-commit": "npm test",
     "release": "standard-version && git push --tags && git push",
-    "pre-release": "npm run release -- --prerelease && git push --tags && git push"
+    "pre-release": "npm run release -- --prerelease && git push --tags && git push",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "next": "14.1.3",
@@ -25,14 +26,10 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.3",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "standard-version": "^9.5.0",
     "typescript": "^5"
-  },
-  "lint-staged": {
-    "app/*.{js,ts,tsx}": [
-      "next lint"
-    ]
   }
 }
