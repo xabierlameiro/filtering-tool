@@ -74,7 +74,7 @@ export async function createNewCandidate(
   if (!parse.success) {
     return {
       errors: parse.error.flatten().fieldErrors,
-      url: ""
+      url: "",
     };
   }
 
