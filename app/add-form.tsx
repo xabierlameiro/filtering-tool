@@ -4,12 +4,11 @@ import { createNewCandidate } from "./actions";
 import React from "react";
 
 const initialState = {
-  message: "",
+  url: "",
   errors: {},
 };
 
-// TODO: Pending refactor
-function Errors({ errors }: { errors?: string[] }) {
+function Errors({ errors }: { readonly errors?: readonly string[] }) {
   if (!errors) return null;
   return <span style={{ color: "red" }}>{errors[0]}</span>;
 }
@@ -26,30 +25,28 @@ export default function CreateNewCandidateForm() {
 
   return (
     <>
-      {state.message && (
-        <input type="text" name="url" value={state.message} disabled />
-      )}
+      {state.url && <input type="text" name="url" value={state.url} disabled />}
       <form ref={formRef} action={formAction}>
-        <label>
-          Technology:
-          <select name="technology">
+        <fieldset>
+          <label htmlFor="technology">Technology:</label>
+          <select name="technology" id="technology">
             <option value="react">React</option>
             <option value="nextjs">Vue</option>
             <option value="typescript">Svelte</option>
             <option value="python">Nextjs</option>
           </select>
           <Errors errors={state.errors?.technology} />
-        </label>
-        <label>
-          Name:
-          <input type="text" name="name" />
+        </fieldset>
+        <fieldset>
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" id="name" />
           <Errors errors={state.errors?.name} />
-        </label>
-        <label>
-          CV:
-          <input type="file" name="cv" accept=".pdf" />
+        </fieldset>
+        <fieldset>
+          <label htmlFor="cv">CV:</label>
+          <input type="file" name="cv" accept=".pdf" id="cv" />
           <Errors errors={state.errors?.cv} />
-        </label>
+        </fieldset>
         <input type="submit" value="Generar prueba" />
       </form>
     </>

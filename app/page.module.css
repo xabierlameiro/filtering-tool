@@ -14,9 +14,10 @@
     max-width: 400px;
     gap: 10px;
   }
-  & label {
+  & fieldset {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: none;
   }
   & span {
     grid-column: 1 / 3;
