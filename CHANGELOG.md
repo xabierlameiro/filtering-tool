@@ -1,4 +1,10 @@
 Changelog
+### [0.1.4](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.3...v0.1.4) (2024-03-17)
+
+
+### Features
+
+* prettier config ([9ac35df](https://github.com/xabierlameiro/filtering-tool/commit/9ac35df6c7f874eedceea70838981c445ba3619b))
 
 ### [0.1.3](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.2...v0.1.3) (2024-03-16)
 
