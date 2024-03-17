@@ -1,4 +1,16 @@
 Changelog
+### [0.1.5](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.4...v0.1.5) (2024-03-17)
+
+
+### Features
+
+* add server form ([749416c](https://github.com/xabierlameiro/filtering-tool/commit/749416c764b6260e35c9adb0b4dc3c5207ccfa20))
+
+
+### Styles
+
+* postcss config ([19d31f5](https://github.com/xabierlameiro/filtering-tool/commit/19d31f50a4c9de8604a17ffda9e0df7a085f32e9))
+
 ### [0.1.4](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.3...v0.1.4) (2024-03-17)
 
 ### Features
