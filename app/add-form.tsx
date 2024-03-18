@@ -43,9 +43,9 @@ export default function CreateNewCandidateForm() {
           <Errors errors={state.errors?.name} />
         </fieldset>
         <fieldset>
-          <label htmlFor="cv">CV:</label>
-          <input type="file" name="cv" accept=".pdf" id="cv" />
-          <Errors errors={state.errors?.cv} />
+          <label htmlFor="cv_binary">CV:</label>
+          <input type="file" name="cv_binary" accept=".pdf" id="cv_binary" />
+          <Errors errors={state.errors?.cv_binary} />
         </fieldset>
         <input type="submit" value="Generar prueba" />
       </form>
