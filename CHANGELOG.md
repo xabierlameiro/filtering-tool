@@ -1,4 +1,12 @@
 Changelog
+### [0.1.6](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.5...v0.1.6) (2024-03-18)
+
+
+### Features
+
+* insert candidate in db ([8344090](https://github.com/xabierlameiro/filtering-tool/commit/83440901e285da36ae2e9e907fbf1aeb60d09335))
+* new page wip ([10a002a](https://github.com/xabierlameiro/filtering-tool/commit/10a002a5455546f75886af6373bcd5e85b2b8c45))
+
 ### [0.1.5](https://github.com/xabierlameiro/filtering-tool/compare/v0.1.4...v0.1.5) (2024-03-17)
 
 
