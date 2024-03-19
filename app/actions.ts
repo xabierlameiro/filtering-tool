@@ -50,19 +50,6 @@ const schema = z
 
 export type Candidate = z.infer<typeof schema>;
 
-// CREATE TABLE candidates(
-//     id UUID PRIMARY KEY,
-//     created_at TIMESTAMP NOT NULL,
-//     technology TEXT NOT NULL,
-//     name TEXT NOT NULL,
-//     cv_url TEXT NOT NULL
-// );
-
-// DROP TABLE candidates;
-
-// DELETE FROM candidates
-// WHERE id = 'b9e3b2e5-3c3f-4a8a-8b9c-1d9a9f1e9c0b';
-
 export async function createNewCandidate(
   prevState: { url?: string },
   formData: FormData,
@@ -81,9 +68,10 @@ export async function createNewCandidate(
   }
 
   try {
+    // We need insert the owner
     await sql`INSERT INTO candidates
-        (id, created_at, technology, name, cv_url)
-        VALUES (${parse.data.id}, ${parse.data.created_at}, ${parse.data.technology}, ${parse.data.name}, ${parse.data.cv_url})`;
+        (id,  name, technology, created_at, cv_url)
+        VALUES (${parse.data.id}, ${parse.data.name}, ${parse.data.technology}, ${parse.data.created_at}, ${parse.data.cv_url})`;
 
     const BlobFile = formData.get("cv_binary") as Blob;
     const file = await BlobFile.arrayBuffer();

@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 //import Linkedin from "next-auth/providers/linkedin"
+import { sql } from "@vercel/postgres";
 
 export const {
   handlers: { GET, POST },
@@ -19,7 +20,6 @@ export const {
     debug: false,
     callbacks: {
       authorized({ auth, request: { nextUrl } }: any) {
-        console.log("auth user", auth?.user);
         const isLoggedIn = !!auth?.user;
         const isOnDashboard = nextUrl.pathname.startsWith("/");
         if (isOnDashboard) {
@@ -29,6 +29,23 @@ export const {
           return Response.redirect(new URL("/dashboard", nextUrl));
         }
         return true;
+      },
+    },
+    events: {
+      signIn: async ({ user, account }) => {
+        try {
+          // check if user exists
+          const { rows } =
+            await sql`SELECT * FROM users WHERE email = ${user.email}`;
+          if (!rows.length) {
+            // create user if not exists
+            await sql`INSERT INTO users
+            (id, name, email, image, provider, create_at)
+            VALUES (${user.id}, ${user.name}, ${user.email}, ${user.image}, ${account?.provider}, ${new Date().toISOString()})`;
+          }
+        } catch (error) {
+          console.log(error);
+        }
       },
     },
   };
