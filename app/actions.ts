@@ -4,7 +4,7 @@ import { z } from "zod";
 import { sql } from "@vercel/postgres";
 import { put } from "@vercel/blob";
 import { UUID } from "crypto";
-import { auth } from './auth'
+import { auth } from "auth";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ACCEPTED_TYPES = ["application/pdf"];
@@ -55,7 +55,7 @@ export async function createNewCandidate(
   prevState: { url?: string },
   formData: FormData,
 ) {
-  const session = await auth()
+  const session = await auth();
 
   const parse = schema.safeParse({
     technology: formData.get("technology"),
