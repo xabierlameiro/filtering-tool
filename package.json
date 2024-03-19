@@ -12,7 +12,7 @@
     "release": "standard-version && git push --tags && git push",
     "pre-release": "npm run release -- --prerelease && git push --tags && git push",
     "format": "npx prettier --write .",
-    "seed": "node -r dotenv/config scripts/seed.js"
+    "seed": "node -r dotenv/config ./scripts/seed.js"
   },
   "dependencies": {
     "@vercel/blob": "^0.22.1",
