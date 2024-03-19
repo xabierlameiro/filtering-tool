@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 export function middleware(req: NextRequest) {
   const session = req.cookies.get("authjs.session-token");
   if (!session) {
-    return NextResponse.redirect(new URL("/api/auth/signin", req.nextUrl));
+    //  return NextResponse.redirect(new URL("/api/auth/signin", req.nextUrl));
   }
 }
 
