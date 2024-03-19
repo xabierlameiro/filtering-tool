@@ -15,20 +15,18 @@ export const {
     theme: {
       logo: "https://next-auth.js.org/img/logo/logo-sm.png",
     },
-    providers: [
-      Google
-    ],
+    providers: [Google],
     debug: false,
     callbacks: {
       authorized({ auth, request: { nextUrl } }: any) {
-        console.log('auth user', auth?.user)
+        console.log("auth user", auth?.user);
         const isLoggedIn = !!auth?.user;
-        const isOnDashboard = nextUrl.pathname.startsWith('/');
+        const isOnDashboard = nextUrl.pathname.startsWith("/");
         if (isOnDashboard) {
           if (isLoggedIn) return true;
           return false; // Redirect unauthenticated users to login page
         } else if (isLoggedIn) {
-          return Response.redirect(new URL('/dashboard', nextUrl));
+          return Response.redirect(new URL("/dashboard", nextUrl));
         }
         return true;
       },
