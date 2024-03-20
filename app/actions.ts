@@ -87,7 +87,9 @@ export async function createNewCandidate(
       await sql`DELETE FROM candidates WHERE id = ${parse.data.id}`;
     });
 
-    return { url: `https://example.com/candidates/${parse.data.id}` };
+    return {
+      url: `${process.env.DOMAIN}/test/${parse.data.id}`
+    };
   } catch (error) {
     console.error("Error creating candidate", error);
     return { url: "" };
