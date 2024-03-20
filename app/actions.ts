@@ -88,7 +88,7 @@ export async function createNewCandidate(
     });
 
     return {
-      url: `${process.env.DOMAIN}/test/${parse.data.id}`
+      url: `${process.env.DOMAIN}/test/${parse.data.id}`,
     };
   } catch (error) {
     console.error("Error creating candidate", error);
