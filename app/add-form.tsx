@@ -25,7 +25,22 @@ export default function CreateNewCandidateForm() {
 
   return (
     <>
-      {state.url && <input type="text" name="url" value={state.url} disabled />}
+      {state.url && (
+        <>
+          <label htmlFor="url">Url para el candidato:</label>
+          <input
+            type="text"
+            name="url"
+            value={state.url}
+            readOnly
+            onClick={(e) => {
+              e.currentTarget.select();
+              document.execCommand("copy");
+              alert("Url copiada al portapapeles");
+            }}
+          />
+        </>
+      )}
       <form ref={formRef} action={formAction}>
         <fieldset>
           <label htmlFor="technology">Technology:</label>
