@@ -1,5 +1,4 @@
 "use server";
-
 import { z } from "zod";
 import { sql } from "@vercel/postgres";
 import { put } from "@vercel/blob";
@@ -11,7 +10,7 @@ const ACCEPTED_TYPES = ["application/pdf"];
 
 const schema = z
   .object({
-    technology: z.enum(["react", "nextjs", "typescript", "python"]),
+    technology: z.enum(["react", "nextjs", "svelte", "python"]),
     name: z
       .string()
       .refine((name) => name?.length > 0, "Name is required.")

@@ -34,7 +34,7 @@ const NavBar = async () => {
     <nav>
       {session ? (
         <>
-          <Link href="/">Home</Link>
+          <Link href="/new">New candidate</Link>
           <Link href="/dashboard">Dashboard</Link>
           {session.user?.image && (
             <Image

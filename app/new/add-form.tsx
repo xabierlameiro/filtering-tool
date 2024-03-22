@@ -1,6 +1,6 @@
 "use client";
 import { useFormState } from "react-dom";
-import { createNewCandidate } from "./actions";
+import { createNewCandidate } from "../actions";
 import React from "react";
 
 const initialState = {
@@ -47,7 +47,7 @@ export default function CreateNewCandidateForm() {
           <select name="technology" id="technology">
             <option value="react">React</option>
             <option value="nextjs">Vue</option>
-            <option value="typescript">Svelte</option>
+            <option value="svelte">Svelte</option>
             <option value="python">Nextjs</option>
           </select>
           <Errors errors={state.errors?.technology} />
