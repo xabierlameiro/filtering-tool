@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && npx prettier --write .",
+    "lint": "next lint && npx prettier --write . && git add .",
     "prepare": "husky",
     "pre-commit": "npm test",
     "release": "standard-version && git push --tags && git push",
