@@ -1,16 +1,23 @@
 ---
-title: Git basics - 10 steps to get started on Git
-pepe: 10
+answers:
+  [
+    { "value": "Respuesta 1", "correct": false },
+    { "value": "Respuesta 2", "correct": false },
+    { "value": "Respuesta 3", "correct": true },
+  ]
 ---
 
 ## ¿Cómo crear un componente controlado en React?
 
-# epa
-
-Un componente controlado en React es aquel cuyo estado es manejado completamente por React y se actualiza a través de sus props. ¿Puedes escribir un ejemplo de un componente controlado en React utilizando el hook `useState`?
-
-```tsx {2}
+```jsx {1,2}#a {3,4}#b title="BABABBBA" caption="BABABBBA"
 <Fragment>
   <input type="text" value={value} onChange={handleChange} />
 </Fragment>
 ```
+
+```js /age/#v /name/#v /setAge/#s /setName/#s /50/#i /"Taylor"/#i showLineNumbers
+const [age, setAge] = useState(50);
+const [name, setName] = useState("Taylor");
+```
+
+This is an array `[1, 2, 3]{:js}` of numbers 1 through 3.

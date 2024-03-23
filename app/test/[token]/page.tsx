@@ -10,11 +10,18 @@ export default async function Post() {
   );
 
   const rehypeCodeOptions: CodeOptions = {
-    theme: "dracula",
+    theme: {
+      dark: "github-dark-dimmed",
+      light: "github-light",
+    },
     keepBackground: true,
+    grid: true,
   };
 
-  const { content, frontmatter } = await compileMDX({
+  const { content, frontmatter } = await compileMDX<{
+    title: string;
+    answers: { value: string }[];
+  }>({
     source: markdownFile,
     options: {
       parseFrontmatter: true,
@@ -23,9 +30,21 @@ export default async function Post() {
       },
     },
   });
-  console.log(frontmatter);
 
-  return <>{content}</>;
+  const Answers = frontmatter.answers.map((answer) => {
+    return (
+      <div key={answer.value}>
+        <p>{answer.value}</p>
+      </div>
+    );
+  });
+
+  return (
+    <>
+      {content}
+      {Answers}
+    </>
+  );
 }
 
 export const runtime = "nodejs";

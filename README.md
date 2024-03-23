@@ -37,3 +37,5 @@
 - https://www.conventionalcommits.org/es/v1.0.0/
 - https://keepachangelog.com/en/1.0.0/
 - https://github.com/conventional-changelog/standard-version#readme
+- https://shiki.style/guide/dual-themes#light-dark-dual-themes
+- https://rehype-pretty-code.netlify.app/
