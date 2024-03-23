@@ -14,7 +14,6 @@ body {
  */
 pre {
   overflow-x: auto;
-  padding: 1rem 0;
 }
 
 pre [data-line] {
@@ -26,6 +25,8 @@ code {
   padding: 1rem;
   width: fit-content;
   border-radius: 10px;
+  margin: 1px;
+  border: 1px solid #e1e4e8;
 }
 
 code > [data-line]::before {
@@ -51,7 +52,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 code[data-theme*=" "],
 code[data-theme*=" "] span {
   color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
+  background-color: #f6f8fa;
 }
 
 @media (prefers-color-scheme: dark) {
