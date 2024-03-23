@@ -11,5 +11,10 @@ export default function TestLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <>
+      <p>layout del mdx</p>
+      {children}
+    </>
+  );
 }
