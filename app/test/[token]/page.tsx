@@ -2,27 +2,34 @@ import fs from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeCode, { Options as CodeOptions } from "rehype-pretty-code";
+import RadioButtonGroup from "./_components/radioButtons";
+
+const rehypeCodeOptions: CodeOptions = {
+  theme: {
+    dark: "github-dark-dimmed",
+    light: "github-light",
+  },
+  keepBackground: true,
+  grid: true,
+};
 
 export default async function Post() {
-  const markdownFile = fs.readFileSync(
-    path.join(process.cwd(), "app/_docs/git.mdx"),
-    "utf-8",
-  );
+  // Read all mdx files in "app/_docs" directory
+  const mdxFileNames = fs.readdirSync(path.join(process.cwd(), "app/_docs"));
 
-  const rehypeCodeOptions: CodeOptions = {
-    theme: {
-      dark: "github-dark-dimmed",
-      light: "github-light",
-    },
-    keepBackground: true,
-    grid: true,
-  };
+  // Read all mdx files in "app/_docs" directory
+  const mdxFiles = mdxFileNames.map((fileName) => {
+    return fs.readFileSync(
+      path.join(process.cwd(), "app/_docs/", fileName),
+      "utf-8",
+    );
+  });
 
   const { content, frontmatter } = await compileMDX<{
     title: string;
     answers: { value: string }[];
   }>({
-    source: markdownFile,
+    source: mdxFiles[1],
     options: {
       parseFrontmatter: true,
       mdxOptions: {
@@ -31,18 +38,10 @@ export default async function Post() {
     },
   });
 
-  const Answers = frontmatter.answers.map((answer) => {
-    return (
-      <div key={answer.value}>
-        <p>{answer.value}</p>
-      </div>
-    );
-  });
-
   return (
     <>
       {content}
-      {Answers}
+      <RadioButtonGroup options={frontmatter.answers} />
     </>
   );
 }

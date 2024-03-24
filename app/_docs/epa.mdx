@@ -1,0 +1,21 @@
+---
+answers:
+  [
+    { "value": "Respuesta 1", "correct": false },
+    { "value": "Respuesta 2", "correct": false },
+    { "value": "Respuesta 3", "correct": true },
+  ]
+---
+
+## ¿Cómo crear un componente controlado en React?
+
+```jsx {1,2}#a {3,4}#b title="TITLE" caption="CAPTION"
+<Fragment>
+  <input type="text" value={value} onChange={handleChange} />
+</Fragment>
+```
+
+```js /age/#v /name/#v /setAge/#s /setName/#s /50/#i /"Taylor"/#i showLineNumbers
+const [age, setAge] = useState(50);
+const [name, setName] = useState("Taylor");
+```
