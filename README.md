@@ -39,5 +39,4 @@
 - https://github.com/conventional-changelog/standard-version#readme
 - https://shiki.style/guide/dual-themes#light-dark-dual-themes
 - https://rehype-pretty-code.netlify.app/
-- https://docs.pmnd.rs/zustand/getting-started/introduction
 
